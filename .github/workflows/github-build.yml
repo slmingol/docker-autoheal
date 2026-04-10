@@ -1,9 +1,7 @@
-name: build
+name: Build and Test
 
 on:
   push:
-    branches:
-      - main
     tags:
       - '*'
   pull_request:
@@ -45,24 +43,14 @@ jobs:
 
       - name: Login to DockerHub
         if: github.event_name != 'pull_request'
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-
-      - name: Set tags
+        uses: Set tags for PR or manual tag builds
         id: meta
         run: |
-          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
-            echo "tags=willfarrell/autoheal:latest" >> $GITHUB_OUTPUT
-            echo "push=true" >> $GITHUB_OUTPUT
-          elif [[ "${{ github.ref }}" == refs/tags/* ]]; then
+          if [[ "${{ github.ref }}" == refs/tags/* ]]; then
             VERSION=${GITHUB_REF#refs/tags/}
-            echo "tags=willfarrell/autoheal:${VERSION},willfarrell/autoheal:latest" >> $GITHUB_OUTPUT
-            echo "push=true" >> $GITHUB_OUTPUT
+            echo "tags=willfarrell/autoheal:${VERSION}" >> $GITHUB_OUTPUT
           else
             echo "tags=willfarrell/autoheal:pr-${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
-            echo "push=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Build image for scanning
@@ -95,13 +83,19 @@ jobs:
           exit-code: '1'
           severity: 'CRITICAL,HIGH'
 
+      - name: Login to DockerHub
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
       - name: Build and push multi-platform
+        if: startsWith(github.ref, 'refs/tags/')
         uses: docker/build-push-action@v6
         with:
           context: .
           file: ./Dockerfile
-          push: ${{ steps.meta.outputs.push }}
-          platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le
-          tags: ${{ steps.meta.outputs.tags }}
+          push: true
           cache-from: type=gha
           cache-to: type=gha,mode=max
