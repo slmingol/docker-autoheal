@@ -1,3 +1,13 @@
+## [1.0.1](https://github.com/slmingol/docker-autoheal/compare/v1.0.0...v1.0.1) (2026-04-10)
+
+### Bug Fixes
+
+* improve documentation clarity for version tags ([1d4b335](https://github.com/slmingol/docker-autoheal/commit/1d4b3353270a52c6979e23a8c8077def959dbf2f))
+
+### Documentation
+
+* update README to reflect automated semantic versioning ([9a6cc42](https://github.com/slmingol/docker-autoheal/commit/9a6cc424d9c98a3b29ed185381269d1d9a9d415e))
+
 ## 1.0.0 (2026-04-10)
 
 ### ⚠ BREAKING CHANGES
