@@ -1,3 +1,9 @@
+## [1.1.3](https://github.com/slmingol/docker-autoheal/compare/v1.1.2...v1.1.3) (2026-04-10)
+
+### Bug Fixes
+
+* update README with correct DockerHub username and trigger release with secrets ([8fe5f51](https://github.com/slmingol/docker-autoheal/commit/8fe5f515e6ba3a4c7c08fc3623fc03cb361479eb))
+
 ## [1.1.2](https://github.com/slmingol/docker-autoheal/compare/v1.1.1...v1.1.2) (2026-04-10)
 
 ### Bug Fixes
