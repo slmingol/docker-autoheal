@@ -1,3 +1,9 @@
+## [1.1.4](https://github.com/slmingol/docker-autoheal/compare/v1.1.3...v1.1.4) (2026-04-10)
+
+### Bug Fixes
+
+* correct DockerHub username in documentation ([d771ffc](https://github.com/slmingol/docker-autoheal/commit/d771ffcc0d53bb377c1bbdeabd8a706f0db3e06a))
+
 ## [1.1.3](https://github.com/slmingol/docker-autoheal/compare/v1.1.2...v1.1.3) (2026-04-10)
 
 ### Bug Fixes
