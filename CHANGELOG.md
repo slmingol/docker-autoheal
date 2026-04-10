@@ -1,3 +1,9 @@
+## [1.0.2](https://github.com/slmingol/docker-autoheal/compare/v1.0.1...v1.0.2) (2026-04-10)
+
+### Bug Fixes
+
+* allow semantic-release to push commits and tags ([ac5dc1a](https://github.com/slmingol/docker-autoheal/commit/ac5dc1a5b55509431c4e09b14bbbc0bee6b2b64c))
+
 ## [1.0.1](https://github.com/slmingol/docker-autoheal/compare/v1.0.0...v1.0.1) (2026-04-10)
 
 ### Bug Fixes
