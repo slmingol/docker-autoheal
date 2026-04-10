@@ -9,6 +9,7 @@ permissions:
   contents: write
   issues: write
   pull-requests: write
+  packages: write
 
 jobs:
   release:
@@ -68,6 +69,13 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
@@ -78,5 +86,7 @@ jobs:
           tags: |
             willfarrell/autoheal:latest
             willfarrell/autoheal:${{ needs.release.outputs.new_release_version }}
+            ghcr.io/${{ github.repository_owner }}/docker-autoheal:latest
+            ghcr.io/${{ github.repository_owner }}/docker-autoheal:${{ needs.release.outputs.new_release_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max

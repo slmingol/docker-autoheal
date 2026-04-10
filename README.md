@@ -8,6 +8,10 @@ This container is a stand-in till there is native support for `--exit-on-unhealt
 - [`latest`](https://github.com/willfarrell/docker-autoheal/blob/main/Dockerfile) - Built automatically on release
 - Semantic versioned releases - See [all available versions](https://github.com/willfarrell/docker-autoheal/releases)
 
+### Available on multiple registries
+- **DockerHub**: `willfarrell/autoheal:latest` or `willfarrell/autoheal:1.0.2`
+- **GitHub Container Registry**: `ghcr.io/slmingol/docker-autoheal:latest` or `ghcr.io/slmingol/docker-autoheal:1.0.2`
+
 
 ![](https://img.shields.io/docker/pulls/willfarrell/autoheal "Total docker pulls") [![](https://images.microbadger.com/badges/image/willfarrell/autoheal.svg)](http://microbadger.com/images/willfarrell/autoheal "Docker layer breakdown")
 
