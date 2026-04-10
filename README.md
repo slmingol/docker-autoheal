@@ -9,8 +9,8 @@ This container is a stand-in till there is native support for `--exit-on-unhealt
 - Semantic versioned releases - See [all available versions](https://github.com/slmingol/docker-autoheal/releases)
 
 ### Available on multiple registries
-- **DockerHub**: `slmingol/autoheal:latest` or `slmingol/autoheal:1.1.0`
-- **GitHub Container Registry**: `ghcr.io/slmingol/docker-autoheal:latest` or `ghcr.io/slmingol/docker-autoheal:1.1.0`
+- **DockerHub**: `dockerhub_token_goreleaser_ex/autoheal:latest` or `dockerhub_token_goreleaser_ex/autoheal:1.1.3`
+- **GitHub Container Registry**: `ghcr.io/slmingol/docker-autoheal:latest` or `ghcr.io/slmingol/docker-autoheal:1.1.3`
 
 
 ![](https://img.shields.io/docker/pulls/willfarrell/autoheal "Total docker pulls") [![](https://images.microbadger.com/badges/image/willfarrell/autoheal.svg)](http://microbadger.com/images/willfarrell/autoheal "Docker layer breakdown")
