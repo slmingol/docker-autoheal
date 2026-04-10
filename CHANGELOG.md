@@ -1,3 +1,9 @@
+## [1.1.2](https://github.com/slmingol/docker-autoheal/compare/v1.1.1...v1.1.2) (2026-04-10)
+
+### Bug Fixes
+
+* update DockerHub references to use correct account and fix workflow syntax ([5625942](https://github.com/slmingol/docker-autoheal/commit/5625942dfe285065f6528409e4fe5c38ec6d5dc3))
+
 ## [1.1.1](https://github.com/slmingol/docker-autoheal/compare/v1.1.0...v1.1.1) (2026-04-10)
 
 ### Bug Fixes
