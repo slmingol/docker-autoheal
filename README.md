@@ -5,12 +5,12 @@ This functionality was proposed to be included with the addition of `HEALTHCHECK
 This container is a stand-in till there is native support for `--exit-on-unhealthy` https://github.com/docker/docker/pull/22719.
 
 ## Supported tags and Dockerfile links
-- [`latest`](https://github.com/willfarrell/docker-autoheal/blob/main/Dockerfile) - Built automatically on release
-- Semantic versioned releases - See [all available versions](https://github.com/willfarrell/docker-autoheal/releases)
+- [`latest`](https://github.com/slmingol/docker-autoheal/blob/main/Dockerfile) - Built automatically on release
+- Semantic versioned releases - See [all available versions](https://github.com/slmingol/docker-autoheal/releases)
 
 ### Available on multiple registries
-- **DockerHub**: `willfarrell/autoheal:latest` or `willfarrell/autoheal:1.0.2`
-- **GitHub Container Registry**: `ghcr.io/slmingol/docker-autoheal:latest` or `ghcr.io/slmingol/docker-autoheal:1.0.2`
+- **DockerHub**: `slmingol/autoheal:latest` or `slmingol/autoheal:1.1.0`
+- **GitHub Container Registry**: `ghcr.io/slmingol/docker-autoheal:latest` or `ghcr.io/slmingol/docker-autoheal:1.1.0`
 
 
 ![](https://img.shields.io/docker/pulls/willfarrell/autoheal "Total docker pulls") [![](https://images.microbadger.com/badges/image/willfarrell/autoheal.svg)](http://microbadger.com/images/willfarrell/autoheal "Docker layer breakdown")
